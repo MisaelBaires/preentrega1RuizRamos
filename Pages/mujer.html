@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- favicon -->
+    <link
+      rel="shortcut icon"
+      href="./assets/img/favicon.ico"
+      type="image/x-icon"
+    />
+    <!-- link fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/29c3be7601.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- link del css de bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- link del css -->
+    <link rel="stylesheet" href="../css/styles.css" />
+    <title>MUJER</title>
+  </head>
+  <body>
+    <!-- Apartado del NAV -->
+    <header>
+      <img id="logo" src="../assets/img/logo_gotico.png" alt="logo" />
+      <h1><a class="navlink" href="../index.html">INICIO</a></h1>
+      <!-- navbar del bootstrap -->
+      <nav id="navbar" class="navbar navbar-expand-lg --bs-tertiary-color">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="./ayuda.html">AYUDA</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./contactanos.html">CONTACTANOS</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Ropa
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="./prendas.html">Prendas</a></li>
+                  <li><a class="dropdown-item" href="#">Mujer</a></li>
+                  <li><a class="dropdown-item" href="./hombre.html">Hombre</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="./nuevo.html">Nuevo</a></li>
+                </ul>
+              </li>
+              <!-- <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              </li> -->
+            </ul>
+            <!--<form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>-->
+          </div>
+        </div>
+      </nav>
+      <!-- <nav id="navbar">
+        <ul>
+          <li><a class="navlink" href="./nuevo.html">Nuevo</a></li>
+          <li><a class="navlink" href="./prendas.html">Prendas</a></li>
+          <li><a class="navlink" href="#">Mujer</a></li>
+          <li><a class="navlink" href="./hombre.html">Hombre</a></li>
+          <li><a class="navlink" href="./ayuda.html">AYUDA</a></li>
+          <li><a class="navlink" href="./contactanos.html">CONTACTANOS</a></li>
+        </ul>
+      </nav> -->
+    </header>
+    <main>
+      <section>
+        <div class="div-form">
+          <form>
+            <h3>FILTRAR POR</h3>
+            <select id="barra-filtro" name="filtro" class="barra-control">
+              <option disabled selected value>Escribe lo que buscas</option>
+              <option value="remeras">Remeras</option>
+              <option value="faldas">Faldas</option>
+              <option value="todo">Todo</option>
+              <option value="buzos">Buzos</option>
+              <option value="pantalones">Pantalones</option>
+            </select>
+          </form>
+        </div>
+      </section>
+      <section>
+        <div class="div-form">
+          <form>
+            <h4>Talle</h4>
+            <label for="s">
+              <input type="radio" value="s" name="radio" id="s" />S</label
+            ><br />
+            <label for="m">
+              <input type="radio" value="m" name="radio" id="m" />M</label
+            ><br />
+            <label for="l">
+              <input type="radio" value="l" name="radio" id="l" />L</label
+            ><br />
+            <label for="xl">
+              <input type="radio" value="xl" name="radio" id="xl" />XL</label
+            ><br />
+          </form>
+        </div>
+      </section>
+      <hr />
+      <section>
+        <div class="div-form">
+          <form>
+            <h3>Desde</h3>
+            <textarea id="precio-min" placeholder="minimo"></textarea>
+            <h3>Hasta</h3>
+            <textarea id="precio-max" placeholder="maximo"></textarea>
+            <input type="submit" value="Agregar al carrito" />
+          </form>
+        </div>
+      </section>
+      <section>
+        <div class="galeria">
+          <a href="./venta.html" target="_blank"><img src="../assets/img/remera.webp" alt="remera" /></a>
+          <a href="./venta.html" target="_blank"><img src="../assets/img/remera.webp" alt="remera" /></a>
+          <a href="./venta.html" target="_blank"><img src="../assets/img/remera.webp" alt="remera" /></a>
+          <a href="./venta.html" target="_blank"><img src="../assets/img/remera.webp" alt="remera" /></a>
+          <a href="./venta.html" target="_blank"><img src="../assets/img/remera.webp" alt="remera" /></a>
+          <a href="./venta.html" target="_blank"><img src="../assets/img/remera.webp" alt="remera" /></a>
+        </div>
+      </section>
+      <hr />
+      <section>
+        <table>
+          <thead>
+            <tr>
+              <th>Menu</th>
+              <th>Contactanos</th>
+              <th>Redes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a href="../index.html">Inicio</td></a>
+              <td></td>
+              <td><a href="https://www.instagram.com/?hl=es" target="_blank">Instagram</td></a>
+            </tr>
+            <tr>
+              <td><a href="./nuevo.html">Nuevo</td></a>
+              <td>Numero</td>
+              <td><a href="https://www.linkedin.com/jobs?src=go-pa&trk=sem-ga_campid.18853522261_asid.146084015209_crid.633923221414_kw.linkedin_d.c_tid.kwd-296170574619_n.g_mt.e_geo.2840&mcid=6994434350142418944&cid=&gad_source=1&gclid=EAIaIQobChMI0p-WiO2eiwMVHZBQBh06cRWcEAAYASAAEgLThfD_BwE&gclsrc=aw.ds" target="_blank">Linkedin</td></a>
+            </tr>
+            <tr>
+              <td><a href="./prendas.html">Prendas</td></a>
+              <td></td>
+              <td><a href="https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2F" target="_blank">Facebook</td></a>
+            </tr>
+            <tr>
+              <td><a href="#">Mujer</td></a>
+              <td>Correo</td>
+              <td><a href="https://www.youtube.com" target="_blank">Youtube</td></a>
+            </tr>
+            <tr>
+              <td><a href="./hombre.html">Hombre</td></a>
+              <td></td>
+              <td><a href="https://x.com/?mx=2" target="_blank">Twitter</td></a>
+            </tr>
+            <tr>
+              <td><a href="./ayuda.html">AYUDA</td></a>
+              <td>Direccion</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td><a href="./contactanos.html">CONTACTANOS</td></a>
+              <td></td>
+              <td></td>
+            </tr>  
+          </tbody>
+        </table>
+      </section>
+    </main>
+    <footer>
+      <p>Argentina</p>
+      <p>Misael Eduardo Ruiz Ramos</p>
+    </footer>
+    <!-- link del js de bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
