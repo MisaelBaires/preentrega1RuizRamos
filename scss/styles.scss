@@ -1,0 +1,265 @@
+$primer-color: #f5f6f7;
+$segundo-color: rgb(50, 47, 53);
+$tercer-color: rgb(231, 111, 131);
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: $segundo-color;
+  margin: 0;
+  color: $primer-color;
+  font-family: Verdana, sans-serif;
+}
+/*Estos elementos serán para modificar los archivos desde "index.html-ayuda.html"*/
+header {
+  width: 100%;
+  height: 50px;
+  background-color: $segundo-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+}
+
+h1 {
+  color: $primer-color;
+  font-size: min(5vw, 1.2em);
+  h2 {
+  text-align: center;
+  }
+}
+
+footer {
+  text-align: center;
+}
+
+#logo {
+  width: max(5rem, 9vw);
+  background-color: rgb(50, 47, 53);
+  aspect-ratio: 12 / 4;
+  padding: 0.4rem; 
+}
+
+nav {
+  width: 50%;
+  max-width: 800px;
+  height: 50px;
+}
+
+.navlink {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-inline-start: 0;
+  margin-block: 0;
+  height: 100%;
+}
+
+nav {
+  color: $primer-color;
+  margin: 0 0.2rem;
+  padding: 0.2rem;
+  display: block;
+  ul {
+    li {
+      list-style: none;
+     }
+   }
+}
+
+main {
+  padding-top: 50px;
+}
+a {
+  color: $primer-color;
+}
+
+&:visited
+  color: $primer-color;
+}
+
+a:active {
+  color: $tercer-color;
+}
+
+a:hover {
+  color: $tercer-color
+}
+
+.imagen-presentacion {
+  width: 100%;
+  height: 400px;
+  padding-top: 150px;
+  padding-bottom: 5px;
+}
+
+.galeria {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: auto 10px;
+  margin-bottom: 5px;
+  padding-top: 20px;
+}
+
+.galeria img {
+  width: 240px;
+  height: 330px;
+  border-radius: 5px;
+}
+
+.newsletter {
+  background-color: rgba(46, 26, 26, 0.884);
+  border: none;
+  text-align: center;
+}
+
+.centrador {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/*Estos elementos seran para el documento "contactos.html"*/
+
+fieldset {
+  border: none;
+  padding: 2rem 0;
+  border-bottom: 3px solid rgb(230, 0, 50);
+}
+
+.contactanos-label {
+  display: block;
+  text-align: center;
+}
+
+button {
+  display: block;
+  margin: 40px auto;
+  width: 20%;
+  padding: 15px;
+  font-size: 1.2rem;
+  background: $primer-color;
+  border: 3px solid rgb(142, 59, 197);
+}
+
+/*Estos elementos seran para el documento "venta.html"*/
+
+.detalles-venta {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0;
+  padding: 0 10px;
+}
+
+.item-venta {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 700px;
+  margin: 0 0 0 0;
+  padding: 0 10px;
+}
+
+.item-venta img {
+  width: 100%;
+  max-width: 400px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.item-venta::after {
+  content: "";
+  width: 100px;
+}
+
+.fila {
+  background-color: rgb(116, 30, 19);
+}
+
+.contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+/* Elementos con GRID, estas clases serán diseñadas para experimentar con GRID diferenciando y apartandoce del flex. Estos elementos seran para el documento "ayuda.html-contactanos.html" */
+
+@media (min-width: 1024px) {
+  body {
+    font-size: 20px;
+    padding: 30px;
+}
+}
+
+.gridHeader {
+ grid-area: header;
+}
+
+.gridMain {
+ grid-area: main;
+}
+
+.gridCenter {
+ display: grid;
+ justify-content: center;
+}
+
+.gridFooter {
+ display: grid;
+ grid-area: footer;
+ justify-content: bottom;
+}
+
+/* Media query para tabletas */
+@media (min-width: 600px) {
+  body {
+      font-size: 18px;
+      padding: 20px;
+  }
+
+  .navbar {
+      flex-direction: row;
+      justify-content: space-between;
+  }
+
+  .container {
+      flex-direction: row;
+      justify-content: space-between;
+  }
+  #gridLayout {
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: 10vh 110vh 5vh;
+    grid-template-areas: 
+    "header header header"
+    ". main ."
+    ". footer ."
+    ;
+   }
+}
+
+.ajustadorNav {
+  max-width: 800px;
+  height: 50px;
+}
+
+/* Ajustes del CSS */
+.ajuste {
+  padding-top: 700px;
+  padding-bottom: 5px;
+}
+
+
