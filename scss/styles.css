@@ -255,7 +255,7 @@ button {
   border: 2px solid violet;
   border-radius: 50%;
   margin-left: 50px;
-  position: relative;
+  position: absolute;
   height: 55vw;
   width: 55vw;
   max-width: 500px;
@@ -270,14 +270,92 @@ button {
   background-color: violet;
   width: 50%;
   height: 2px;
-  position: relative;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform-origin: 0% 0%;
 }
-.linea .linea:nth-child(2) {
+
+.linea:nth-child(2) {
   transform: rotate(60deg);
 }
-.linea .linea:nth-child(3) {
-  transform: ro;
+
+.linea:nth-child(3) {
+  transform: rotate(120deg);
+}
+
+.linea:nth-child(4) {
+  transform: rotate(180deg);
+}
+
+.linea:nth-child(5) {
+  transform: rotate(240deg);
+}
+
+.linea:nth-child(6) {
+  transform: rotate(300deg);
+}
+
+.cabina {
+  width: 20%;
+  height: 20%;
+  position: absolute;
+  transform-origin: 50% 0%;
+  animation: cabinas 10s ease-in-out infinite;
+}
+
+.cabina:nth-child(1) {
+  right: -8.5%;
+  top: 50%;
+}
+
+.cabina:nth-child(2) {
+  right: 17%;
+  top: 93.5%;
+}
+
+.cabina:nth-child(3) {
+  right: 67%;
+  top: 93.5%;
+}
+
+.cabina:nth-child(4) {
+  left: -8.5%;
+  top: 50%;
+}
+
+.cabina:nth-child(5) {
+  left: 17%;
+  top: 7%;
+}
+
+.cabina:nth-child(6) {
+  right: 17%;
+  top: 7%;
+}
+
+@keyframes rueda {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes cabinas {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    background-color: none;
+  }
+  50% {
+    background-color: none;
+  }
+  75% {
+    background-color: none;
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
 }/*# sourceMappingURL=styles.css.map */
