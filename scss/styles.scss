@@ -2,6 +2,17 @@ $primer-color: #f5f6f7;
 $segundo-color: rgb(50, 47, 53);
 $tercer-color: rgb(231, 111, 131);
 
+@mixin fotoRopa {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: auto 10px;
+  margin-bottom: 5px;
+  padding-top: 20px;
+}
+
 body {
   width: 100%;
   height: 100vh;
@@ -25,7 +36,7 @@ h1 {
   color: $primer-color;
   font-size: min(5vw, 1.2em);
   h2 {
-  text-align: center;
+    text-align: center;
   }
 }
 
@@ -64,8 +75,8 @@ nav {
   ul {
     li {
       list-style: none;
-     }
-   }
+    }
+  }
 }
 
 main {
@@ -73,43 +84,35 @@ main {
 }
 a {
   color: $primer-color;
+  &:visited {
+    color: $primer-color;
+  }
+
+  &:active {
+    color: $tercer-color;
+  }
+
+  &:hover {
+    color: $tercer-color;
+  }
 }
 
-&:visited
-  color: $primer-color;
-}
-
-a:active {
-  color: $tercer-color;
-}
-
-a:hover {
-  color: $tercer-color
-}
-
-.imagen-presentacion {
-  width: 100%;
-  height: 400px;
-  padding-top: 150px;
-  padding-bottom: 5px;
-}
+@import "imagen-presentacion";
 
 .galeria {
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  margin: auto 10px;
-  margin-bottom: 5px;
-  padding-top: 20px;
+  @include fotoRopa();
+  img {
+    width: 240px;
+  height: 330px;
+  border-radius: 5px;
+  }
 }
 
-.galeria img {
+/*.galeria img {
   width: 240px;
   height: 330px;
   border-radius: 5px;
-}
+}*/
 
 .newsletter {
   background-color: rgba(46, 26, 26, 0.884);
@@ -201,54 +204,53 @@ button {
   body {
     font-size: 20px;
     padding: 30px;
-}
+  }
 }
 
 .gridHeader {
- grid-area: header;
+  grid-area: header;
 }
 
 .gridMain {
- grid-area: main;
+  grid-area: main;
 }
 
 .gridCenter {
- display: grid;
- justify-content: center;
+  display: grid;
+  justify-content: center;
 }
 
 .gridFooter {
- display: grid;
- grid-area: footer;
- justify-content: bottom;
+  display: grid;
+  grid-area: footer;
+  justify-content: bottom;
 }
 
 /* Media query para tabletas */
 @media (min-width: 600px) {
   body {
-      font-size: 18px;
-      padding: 20px;
+    font-size: 18px;
+    padding: 20px;
   }
 
   .navbar {
-      flex-direction: row;
-      justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   .container {
-      flex-direction: row;
-      justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-between;
   }
   #gridLayout {
     display: grid;
     grid-template-columns: 10% 80% 10%;
     grid-template-rows: 10vh 110vh 5vh;
-    grid-template-areas: 
-    "header header header"
-    ". main ."
-    ". footer ."
-    ;
-   }
+    grid-template-areas:
+      "header header header"
+      ". main ."
+      ". footer .";
+  }
 }
 
 .ajustadorNav {
@@ -262,4 +264,43 @@ button {
   padding-bottom: 5px;
 }
 
+/* Animaciones esta sección está diseñada únicamente para las animaciones que estarán al final de cada pie de página */
+.rueda {
+  border: 2px solid violet;
+  border-radius: 50%;
+  margin-left: 50px;
+  position: relative;
+  height: 55vw;
+  width: 55vw;
+  max-width: 500px;
+  max-height: 500px;
+  animation-name: rueda;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
 
+.linea {
+  background-color: violet;
+  width: 50%;
+  height: 2px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform-origin: 0% 0%;
+  .linea:nth-child(2) {
+   transform: rotate(60deg);
+  }
+  .linea:nth-child(3) {
+    transform: ro 
+  }
+  .linea:nth-child(4) {
+    
+  }
+  .linea:nth-child(5) {
+    
+  }
+  .linea:nth-child(6) {
+    
+  }
+}
