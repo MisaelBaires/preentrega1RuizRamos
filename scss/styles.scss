@@ -1,6 +1,8 @@
 $primer-color: #f5f6f7;
 $segundo-color: rgb(50, 47, 53);
 $tercer-color: rgb(231, 111, 131);
+$murcielago-color: rgba(209, 119, 15, 0.692);
+$cara-color: rgba(44, 39, 39, 0.89);
 
 @mixin fotoRopa {
   display: flex;
@@ -353,24 +355,21 @@ button {
 }
 @keyframes cabinas {
   0% {
-   transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   25% {
-  background-color: none;
+    background-color: none;
   }
   50% {
-  background-color: none;
+    background-color: none;
   }
   75% {
-  background-color: none;
+    background-color: none;
   }
   100% {
-   transform: rotate(-360deg);
+    transform: rotate(-360deg);
   }
 }
-
-$murcielago-color: rgba(209, 119, 15, 0.692);
-$cara-color: rgba(44, 39, 39, 0.89);
 
 .murcielago {
   width: 300px;
@@ -378,12 +377,12 @@ $cara-color: rgba(44, 39, 39, 0.89);
   margin: auto;
   margin-top: 75px;
   z-index: 4;
-  position: absolute;
+  position: relative;
   transition: transform 1s ease-in-out 0ms;
 }
 
-.murcielago {
- position: absolute;
+.murcielago * {
+  position: absolute;
 }
 
 .murcielago:active {
@@ -424,5 +423,245 @@ $cara-color: rgba(44, 39, 39, 0.89);
 
 .brazo {
   width: 30%;
-  
+  height: 60%;
+  background: $cara-color;
+  border-radius: 30% 30% 30% 120%;
+  z-index: -1;
+}
+
+.brazo.izquierdo {
+  top: 35%;
+  left: 5%;
+  transform-origin: top left;
+  transform: rotate(130deg) scaleX(-1);
+  animation: 3s linear infinite saludar;
+}
+
+.brazo.derecho {
+  top: 0%;
+  left: -5%;
+  transform: rotate(-45deg);
+}
+
+@keyframes saludar {
+  10% {
+    transform: rotate(110deg) scaleX(-1);
+  }
+  20% {
+    transform: rotate(130deg) scaleX(-1);
+  }
+  30% {
+    transform: rotate(110deg) scaleX(-1);
+  }
+  40% {
+    transform: rotate(130deg) scaleX(-1);
+  }
+}
+
+.pie {
+  width: 15%;
+  height: 30%;
+  background: $cara-color;
+  top: 85%;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.pie.derecho {
+  right: 25%;
+  transform: rotate(-80deg);
+}
+
+.pie.izquierdo {
+  left: 25%;
+  transform: rotate(80deg);
+}
+
+.murcielago-left-ear {
+  position: absolute;
+  top: -26px;
+  left: -31px;
+  z-index: 1;
+  border-top-left-radius: 90px;
+  border-top-right-radius: 10px;
+  transform: rotate(-45deg);
+  border-left: 35px solid transparent;
+  border-right: 35px solid transparent;
+  border-bottom: 70px solid $cara-color;
+}
+
+.murcielago-right-ear {
+  position: absolute;
+  top: -26px;
+  left: 163px;
+  z-index: 1;
+  border-top-left-radius: 90px;
+  border-top-right-radius: 10px;
+  transform: rotate(45deg);
+  border-left: 35px solid transparent;
+  border-right: 35px solid transparent;
+  border-bottom: 70px solid $cara-color;
+}
+
+.murcielago-left-inner-ear {
+  position: absolute;
+  top: 22px;
+  left: -20px;
+  border-top-left-radius: 90px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 40%;
+  border-bottom-left-radius: 40%;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 40px solid pink;
+}
+
+.murcielago-right-inner-ear {
+  position: absolute;
+  top: 22px;
+  left: -20px;
+  border-top-left-radius: 90px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 40%;
+  border-bottom-left-radius: 40%;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 40px solid pink;
+}
+
+.murcielago-left-eye {
+  position: absolute;
+  top: 54px;
+  left: 39px;
+  border-radius: 60%;
+  transform: rotate(25deg);
+  width: 30px;
+  height: 40px;
+  background-color: $cara-color;
+}
+
+.murcielago-right-eye {
+  position: absolute;
+  top: 54px;
+  left: 134px;
+  border-radius: 60%;
+  transform: rotate(-25deg);
+  width: 30px;
+  height: 40px;
+  background-color: $cara-color;
+}
+
+.murcielago-left-inner-eye {
+  position: absolute;
+  top: 8px;
+  left: 2px;
+  width: 10px;
+  height: 20px;
+  transform: rotate(10deg);
+  background-color: $primer-color;
+  border-radius: 60%;
+}
+
+.murcielago-right-inner-eye {
+  position: absolute;
+  top: 8px;
+  left: 18px;
+  width: 10px;
+  height: 20px;
+  transform: rotate(-5deg);
+  background-color: $primer-color;
+  border-radius: 60%;
+}
+
+.murcielago-nose {
+  position: absolute;
+  top: 108px;
+  left: 85px;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  transform: rotate(180deg);
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 20px solid $cara-color;
+}
+
+.murcielago-mouth div {
+  width: 30px;
+  height: 50px;
+  border: 2px solid $segundo-color;
+  border-radius: 190%/190px 150px 0 0;
+  border-color: black transparent transparent transparent;
+}
+
+.murcielago-mouth-line-left {
+ position: absolute;
+ top: 88px;
+ left: 74px;
+ transform: rotate(170deg);
+}
+
+.murcielago-mouth-line-right {
+  position: absolute;
+  top: 88px;
+  left: 91px;
+  transform: rotate(195deg);
+}
+
+.murcielago-whiskers-left div {
+  width: 40px;
+  height: 1px;
+  background-color: $segundo-color;
+}
+
+.murcielago-whiskers-right div {
+  width: 40px;
+  height: 1px;
+  background-color: $segundo-color;
+}
+
+.murcielago-whisker-left-top {
+  position: absolute;
+  top: 120px;
+  left: 52px;
+  transform: rotate(10deg);
+}
+
+.murcielago-whisker-left-middle {
+  position: absolute;
+  top: 127px;
+  left: 52px;
+  transform: rotate(3deg);
+}
+
+.murcielago-whisker-left-bottom {
+  position: absolute;
+  top: 134px;
+  left: 52px;
+  transform: rotate(-3deg);
+}
+
+.murcielago-whisker-right-top {
+  position: absolute;
+  top: 120px;
+  left: 109px;
+  transform: rotate(-10deg);
+}
+
+.murcielago-whisker-right-middle {
+  position: absolute;
+  top: 127px;
+  left: 109px;
+  transform: rotate(-3deg);
+}
+
+.murcielago-whisker-right-bottom {
+  position: absolute;
+  top: 134px;
+  left: 109px;
+  transform: rotate(3deg);
+}
+
+.dropdown-menu .dropdown-item {
+  color: black;
 }
