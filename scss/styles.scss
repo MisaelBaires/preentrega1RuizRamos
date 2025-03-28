@@ -3,6 +3,7 @@ $segundo-color: rgb(50, 47, 53);
 $tercer-color: rgb(231, 111, 131);
 $murcielago-color: rgba(209, 119, 15, 0.692);
 $cara-color: rgba(44, 39, 39, 0.89);
+$nuevo-color: rgba(130, 34, 168, 0.815);
 
 @mixin fotoRopa {
   display: flex;
@@ -18,7 +19,7 @@ $cara-color: rgba(44, 39, 39, 0.89);
 body {
   width: 100%;
   height: 100vh;
-  background-color: $segundo-color;
+  background-color: $nuevo-color;
   margin: 0;
   color: $primer-color;
   font-family: Verdana, sans-serif;
